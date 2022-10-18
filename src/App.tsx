@@ -15,7 +15,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Field, Model, Result, Runtime } from "@malloydata/malloy";
 import { HTMLView } from "@malloydata/render";
-import { DuckDBWASMConnection } from "@malloydata/db-duckdb/src/duckdb_wasm_connection";
+import { DuckDBWASMConnection } from "@malloydata/db-duckdb/dist/duckdb_wasm_connection";
 import { Query } from "./Query";
 import { Results } from "./Results";
 import { ModelSelect } from "./ModelSelect";
