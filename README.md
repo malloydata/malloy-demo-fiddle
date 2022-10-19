@@ -6,16 +6,13 @@ There is a live version of this demo on our documentation website [here](https:/
 
 ## Building the Demo
 
-### Install Malloy
+### Install Dependencies
 
-Start by [Building the Malloy repo](https://github.com/looker-open-source/malloy/blob/main/developing.md). Install the dependencies in that link, then in the top-level `malloy/` directory, run:
-
-1. `npm install` to install dependencies
-2. `npm run build` to build all the libraries Malloy needs
+`npm install` to install dependencies
 
 ### Building and Running the Demo
 
-You can then build or run the demo. First change into the `demo/malloy-duckdb-wasm` directory. Then
+You can then build or run the demo.
 
 ```
 npm run build
