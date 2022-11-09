@@ -28,6 +28,14 @@ npm start
 
 will start up a development web server on port 8888 that will allow you to use the demo at `http://your-hostname:8888`
 
+## Running against a local version of Malloy
+
+1. In your local Malloy repository, run `npm link -ws`. That will make your development packages locally available for development.
+2. In your VS Code extension repository, run `npm run malloy-link` to use your local Malloy packages.
+3. If you make changes to Malloy that are required by the extension, merges those into main, and that will trigger an automatic developer release of Malloy.
+4. Once that release completes, run `npm run malloy-update` to update dependencies to that release. This will break the link to your local version of Malloy, so if you want to resume local development, re-run `npm run malloy-link`
+5. To manually unlink without updating, you may run `npm run malloy-unlink`
+
 ### Deploying the demo
 
 If you wish to create your own demo website, after you have completed `npm run build`, you can copy the contents of the `docs` directory to an available web server. There are no additional dependencies.
