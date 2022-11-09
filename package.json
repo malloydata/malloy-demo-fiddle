@@ -3,19 +3,30 @@
   "version": "0.0.2",
   "description": "",
   "main": "./dist/index.js",
+  "config": {
+    "malloy_packages": [
+      "@malloydata/db-duckdb",
+      "@malloydata/malloy",
+      "@malloydata/render"
+    ]
+  },
   "scripts": {
     "start": "NODE_ENV=development npm run build 8888",
     "watch": "NODE_ENV=development npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "ts-node scripts/build",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "malloy-install": "npm --no-fund --no-audit install --save-exact $npm_package_config_malloy_packages",
+    "malloy-update": "npm --no-fund --no-audit unlink $npm_package_config_malloy_packages && npm run malloy-install",
+    "malloy-link": "npm --no-fund --no-audit link $npm_package_config_malloy_packages",
+    "malloy-unlink": "npm --no-fund --no-save --no-audit unlink $npm_package_config_malloy_packages && npm --no-fund --no-audit install --force"
   },
   "author": "Malloy",
   "license": "GPL-2.0",
   "dependencies": {
-    "@malloydata/db-duckdb": "0.0.3",
-    "@malloydata/malloy": "0.0.3",
-    "@malloydata/render": "0.0.3",
+    "@malloydata/db-duckdb": "^0.0.6",
+    "@malloydata/malloy": "^0.0.6",
+    "@malloydata/render": "^0.0.6",
     "apache-arrow": "^9.0.0",
     "monaco-editor": "^0.34.0",
     "react": "^17.0.2",
