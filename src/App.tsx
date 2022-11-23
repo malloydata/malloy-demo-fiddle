@@ -38,12 +38,12 @@ import moreInfoGithub from "./media/more_info_github.svg";
 import moreInfoSlack from "./media/more_info_slack.svg";
 import moreInfoVSCode from "./media/more_info_vsc.svg";
 
-const DOCS_LINK = "https://looker-open-source.github.io/malloy/documentation/";
-const REPO_LINK = "https://github.com/looker-open-source/malloy/";
+const DOCS_LINK = "https://malloydata.github.io/malloy/documentation/";
+const REPO_LINK = "https://github.com/malloydata/malloy/";
 const SLACK_LINK =
   "https://join.slack.com/t/malloy-community/shared_invite/zt-upi18gic-W2saeFu~VfaVM1~HIerJ7w";
 const VSCODE_INSTALL_LINK =
-  "https://github.com/looker-open-source/malloy/blob/main/README.md";
+  "https://github.com/malloydata/malloy/blob/main/README.md";
 
 const baseReader = new BrowserURLReader();
 const lookup = new DuckDBWasmLookup();
