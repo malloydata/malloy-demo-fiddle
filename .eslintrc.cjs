@@ -24,18 +24,19 @@ module.exports = {
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
   ],
-  ignorePatterns: [
-    "*.d.ts",
-    "node_modules/",
-    "packages/malloy/src/lang/lib/Malloy",
-  ],
+  ignorePatterns: ["*.d.ts", "dist", "node_modules"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     warnOnUnsupportedTypeScriptVersion: false,
   },
   plugins: ["@typescript-eslint", "prettier"],
   rules: {
-    "no-console": "warn",
+    "no-console": [
+      "error",
+      {
+        allow: ["info", "warn", "error"],
+      },
+    ],
     "prettier/prettier": "error",
     "sort-keys": "off",
     "no-duplicate-imports": "error",

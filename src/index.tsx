@@ -11,8 +11,6 @@
  * GNU General Public License for more details.
  */
 
-import * as _webviewAPI from "vscode-webview";
-
 import ReactDOM from "react-dom";
 import React from "react";
 import { App } from "./App";
