@@ -12,6 +12,7 @@
  */
 
 import React, { useCallback, useEffect, useState } from "react";
+import { DuckDBDataProtocol } from "@duckdb/duckdb-wasm";
 import styled, { createGlobalStyle } from "styled-components";
 import { Field, Model, Result, Runtime } from "@malloydata/malloy";
 import { HTMLView } from "@malloydata/render";
@@ -143,7 +144,9 @@ export const App: React.FC = () => {
         for (const tableName of sample.dataTables) {
           connection.database?.registerFileURL(
             tableName,
-            new URL(tableName, window.location.href).toString()
+            new URL(tableName, window.location.href).toString(),
+            DuckDBDataProtocol.HTTP,
+            true
           );
         }
 
