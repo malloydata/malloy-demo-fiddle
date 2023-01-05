@@ -43,8 +43,13 @@ export async function doBuild(): Promise<void> {
       development && !port
         ? {
             onRebuild(error, result) {
-              if (error) console.error("Extension server build failed:", error);
-              else console.log("Extension server build succeeded:", result);
+              if (error)
+                console.error("[watch] Extension server build failed:", error);
+              else
+                console.log(
+                  "[watch] Extension server build succeeded:",
+                  result
+                );
             },
           }
         : false,
