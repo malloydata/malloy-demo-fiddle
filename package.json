@@ -24,9 +24,9 @@
   "author": "Malloy",
   "license": "GPL-2.0",
   "dependencies": {
-    "@malloydata/db-duckdb": "0.0.15",
-    "@malloydata/malloy": "0.0.15",
-    "@malloydata/render": "0.0.15",
+    "@malloydata/db-duckdb": "0.0.20",
+    "@malloydata/malloy": "0.0.20",
+    "@malloydata/render": "0.0.20",
     "apache-arrow": "^9.0.0",
     "monaco-editor": "^0.34.0",
     "react": "^17.0.2",
