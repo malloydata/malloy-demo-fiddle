@@ -144,7 +144,7 @@ interface FieldItemProps {
 }
 
 const FieldItem: React.FC<FieldItemProps> = ({ depth, field, onClick }) => {
-  const isAggregate = field.isAtomicField() && field.isAggregate();
+  const isAggregate = field.isAtomicField() && field.isCalculation();
   const type = field.isAtomicField() ? field.type.toString() : "query";
 
   if (field.isExploreField()) {
@@ -233,7 +233,7 @@ function kindOrd(field: Field) {
   if (field.isExploreField()) {
     return 4;
   }
-  if (field.isAtomicField() && field.isAggregate()) {
+  if (field.isAtomicField() && field.isCalculation()) {
     return 2;
   }
   return 1;

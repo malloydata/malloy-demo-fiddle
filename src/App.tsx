@@ -12,11 +12,10 @@
  */
 
 import React, { useCallback, useEffect, useState } from "react";
-import { DuckDBDataProtocol } from "@duckdb/duckdb-wasm";
 import styled, { createGlobalStyle } from "styled-components";
 import { Field, Model, Result, Runtime } from "@malloydata/malloy";
 import { HTMLView } from "@malloydata/render";
-import { DuckDBWASMConnection } from "@malloydata/db-duckdb/dist/duckdb_wasm_connection";
+import { DuckDBWASMConnection } from "@malloydata/db-duckdb/wasm";
 import { Query } from "./Query";
 import { Results } from "./Results";
 import { ModelSelect } from "./ModelSelect";
@@ -142,11 +141,9 @@ export const App: React.FC = () => {
         setEditedQuery(queryText);
 
         for (const tableName of sample.dataTables) {
-          connection.database?.registerFileURL(
+          connection.registerRemoteTable(
             tableName,
-            new URL(tableName, window.location.href).toString(),
-            DuckDBDataProtocol.HTTP,
-            true
+            new URL(tableName, window.location.href).toString()
           );
         }
 
