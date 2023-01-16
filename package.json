@@ -22,7 +22,7 @@
     "malloy-unlink": "npm --no-fund --no-save --no-audit unlink $npm_package_config_malloy_packages && npm --no-fund --no-audit install --force"
   },
   "author": "Malloy",
-  "license": "GPL-2.0",
+  "license": "MIT",
   "dependencies": {
     "@malloydata/db-duckdb": "0.0.15",
     "@malloydata/malloy": "0.0.15",
