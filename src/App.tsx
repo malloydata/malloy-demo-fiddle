@@ -48,7 +48,7 @@ import moreInfoGithub from "./media/more_info_github.svg";
 import moreInfoSlack from "./media/more_info_slack.svg";
 import moreInfoVSCode from "./media/more_info_vsc.svg";
 
-const DOCS_LINK = "https://malloydata.github.io/malloy/documentation/";
+const DOCS_LINK = "https://malloydata.github.io/documentation/";
 const REPO_LINK = "https://github.com/malloydata/malloy/";
 const SLACK_LINK =
   "https://join.slack.com/t/malloy-community/shared_invite/zt-upi18gic-W2saeFu~VfaVM1~HIerJ7w";
